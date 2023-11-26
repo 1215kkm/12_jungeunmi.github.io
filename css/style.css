@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+@import url('reset.css');
+@import url('fonts.css');
+::-webkit-scrollbar {
+    width: 3px;  /* 스크롤바의 너비 */
+}
+
+::-webkit-scrollbar-thumb {
+    height: 20%; /* 스크롤바의 길이 */
+    background: #d9d9d9; /* 스크롤바의 색상 */    
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+}
+
+.centerbox {width: 1200px; margin: 0 auto; }
+body {overflow-x: hidden;}
+header {width: 100%; height: 100vh; position: relative; }
+header video {width: 130%; height: 150vh; }
+
+header .textbox {position: absolute; width: 100%; height: 100%; color: #fff;font-family: 'apollo'; z-index: 7;}
+header .textbox:before {content: ""; position: absolute; width: 100%; height: 150%; background: rgba(0,0,0,0.5);}
+header .textbox h1 {position: fixed; left: 50%; top: 300px; font-size: 150px; transform: translateX(-50%); font-weight: normal; transition: 1s;}
+header .textbox h1.on {top: -50px; transform: translateX(-50%) scale(0.3); }
+
+
+header .textbox .message {position: absolute; left: 70px; bottom: 100px; font-size: 62px;}
+header .textbox .message p span {color: #9a9a9a;}
+header .textbox .message p:hover span {color: #519ce1;}
+header .textbox .scrollmore {position: absolute; left: 70px; bottom: 30px; font-size: 62px; font-family: 'pretendard'; font-size: 30px;}
+header .textbox .portfolio_day {position: absolute; right: 70px; bottom: 100px; font-size: 62px; text-align: right;}
+
+
+
+
+
+/* main about me */
+#section1 {position: relative; padding-top: 166px; z-index: 7; }
+#section1 h2 {height: 300px; width: 100%; position: absolute; top: 0;}
+#section1 h2 img {position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);}
+
+#section1 article {height: 100%; }
+#section1 article figure {width: 100%; height: 152px; background: url('../images/bg_about.png') 0 0; position: absolute; top: 152px; background-position: 0 0; animation: wave 10s linear infinite; }
+@keyframes wave {
+    0% {background-position: 0 0;}
+    100% {background-position: 1920px 0;}
+    
+}
+
+#section1 article .content {width: 100%; height: 100vh; margin-top: 138px; background: url('../images/bg_section1.jpg'); display: flex; justify-content: center; gap: 115px; padding-top: 220px; padding-bottom: 500px;}
+#section1 article .content .photo {width: 560px; height: 560px; border-radius: 50%; overflow: hidden; position: relative; animation: bubble 2s infinite alternate}
+#section1 article .content .bubble1 {position: absolute; left: 50%; margin-left: -300px; animation: bubble1 3s infinite alternate;}
+#section1 article .content .bubble2 {position: absolute; left: 50%; margin-left: -850px; top: 800px; animation: bubble2 4s infinite alternate}
+
+@keyframes bubble {
+    0% {margin-top: 0;}
+    100% {margin-top: 20px;}
+}
+@keyframes bubble1 {
+    0% {margin-top: 0;}
+    100% {margin-top: 50px;}
+}
+@keyframes bubble2 {
+    0% {margin-top: 0px;}
+    100% {margin-top: 100px;}
+}
+
+
+
+
+
+
+#section1 article .content .profile {position: relative; }
+#section1 article .content .profile .progress {position: absolute; width: 300px; height: 10px; display: flex; margin-top: 10px; gap: 25px;}
+#section1 article .content .profile .prog {width: 70px; height: 4px; background: #244c75; border-radius: 10px; overflow: hidden;;}
+#section1 article .content .profile .prog.ps span {display: block; height: 4px; width: 100%; background: #57afff;}
+#section1 article .content .profile .prog.ai span {display: block; height: 4px; width: 70%; background: #57afff;}
+#section1 article .content .profile .prog.pr span {display: block; height: 4px; width: 55%; background: #57afff;}
+
+
+
+
+
+
+/* main works */
+#section2 {position: relative; padding-top: 166px; margin-top: -500px; z-index: 8;}
+#section2 h2 {height: 300px; width: 100%; position: absolute; top: 0;}
+#section2 h2 img {position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);}
+
+#section2 article {height: 100%; margin-top: 130px;}
+#section2 article figure.wave {width: 100%; height: 152px; background: url('../images/bg_design.png') 0 0; position: absolute; top: 152px; background-position: 0 0; animation: wave 10s linear infinite; }
+@keyframes wave {
+    0% {background-position: 0 0;}
+    100% {background-position: 1920px 0;}
+    
+}
+
+#section2 article .content {width: 100%; background: #000;}
+#section2 article .content h3 {color: #fff; font-size: 72px; text-align: center; padding: 100px 0; font-weight: normal; }
+#section2 article .content ul {width: auto; padding: 0 70px; display: flex; flex-wrap: wrap; gap: 30px; max-height: 2000px;align-content: start; flex-direction: column; }
+#section2 article .content li {width: 49%; display: flex; justify-content: center; align-items: center; border-radius: 30px; background: #f2f2f2; padding: 80px 0; position: relative; }
+#section2 article .content li:nth-child(4) {height: 906px; }
+#section2 article .content li figure { flex-grow: 0; width: 100%; text-align: center;}
+#section2 article .content li figure img {max-width: 100%;}
+#section2 article .content li h4 {position: absolute; font-size: 30px;flex-grow: 0; bottom: 30px; left: 30px; font-weight: normal; color: #333;font-family: 'Pretendard';}
+#section2 article .content li a.view_proj {position: absolute;bottom: 0; border-radius: 30px; background: rgba(0,0,0,.2); color: #fff; padding: 5px 30px; font-size: 20px; right: 30px; bottom: 30px; transition: .1s;}
+
+#section2 article .content li:nth-child(1) a.view_proj:hover {background: #e6554e;}
+#section2 article .content li:nth-child(2) a.view_proj:hover {background: #4b7452;}
+#section2 article .content li:nth-child(3) a.view_proj:hover {background: #2aab6b;}
+#section2 article .content li:nth-child(4) a.view_proj:hover {background: #f19d8c;}
+
+footer {width: 100%; height: 1000px; background: url('../images/bg_footer.jpg') center top; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+footer h1 {color: #fff; font-weight: normal; text-align: center;}
+footer h1 span {display: block; font-size: 22px;}
+footer h1 div {display: block; font-size: 105px; margin-top: 30px; font-weight: normal;}
+
+footer .link {display: block; font-size: 32px; margin-top: 60px; }
+footer .link a {color: #fff; padding: 0 32px; font-family: 'APOLLO', sans-serif; }
+footer .link a img {vertical-align: middle;}
+
+
+
+
+
+
+
+
+/* 보기페이지 */
+.container {display: flex;background: #292826;}
+.list {background: #202020; float: left; height: 100vh; border-radius: 1px solid #606060; width: 20%; overflow: auto; padding: 100px 60px; box-sizing: border-box;}
+.list > a {color: #fff; font-family: 'APOLLO', sans-serif; font-weight: normal; font-size: 28px;
+position: relative; display:block; margin-bottom: 30px;}
+.list > a:hover {color: #519ce1;}
+
+.list ul.app {width: 100%; height: 500px; flex-direction:inherit;}
+
+.list ul.detail {width: 100%; height: 100vh; flex-direction: inherit;}
+
+.list ul li.ban {width: 100%; /* height: 100% */;}
+
+
+.list ul {display: flex; flex-direction: column; flex-wrap: wrap; max-height: 150vh; align-items: center; justify-content: space-around; gap: 15px; font-size: 0;}
+.list ul.app li:nth-child(1) {width: 100%;}
+.list ul.app li:nth-child(2) {width: 100%;}
+.list ul.app li:nth-child(3) {width: 100%;}
+.list ul.app li:nth-child(4) {width: 100%;}
+.list ul.app li:nth-child(5) {width: 100%;}
+.list ul.app li:nth-child(6) {width: 100%;}
+.list ul.app li:nth-child(7) {width: 100%;}
+
+
+
+.list ul.detail li:nth-child(1) {width: 100%;}
+.list ul.detail li:nth-child(2) {width: 100%;}
+.list ul.detail li:nth-child(3) {width: 100%;}
+
+
+.list ul li {width: 50%; max-height: 400px; border-radius: 10px; overflow: hidden; opacity: 0.5; transition: .2s; overflow: hidden; font-size: 0;}
+.list ul li a {font-size: 0;}
+.list ul li:hover,
+.list ul li.on {opacity: 1;}
+.list ul li img {width: 100%;}
+
+
+
+
+.view {background: #292826; float: left; height:calc(100vh - 100px); width: calc(80% - 55px); padding:0 60px 100px 60px; overflow: auto; box-sizing: border-box; display: flex; justify-content: center; gap: 80px ; margin-top: 100px;}
+
+.view .web {max-width: 70%;}
+.view .mobile {}
+.view img {width: 100%;}
+
+.view .menu {width: 30px;height: 30px; border: 2px solid #fff; border-radius: 50%; position: absolute; right: 40px; top: 30px; cursor: pointer; overflow: hidden;
+    background: url('../images/menu_wave.png') 0 15px repeat-x,
+                url('../images/menu_wave.png') 0 20px repeat-x,
+                url('../images/menu_wave.png') 0 25px repeat-x; animation: menuWave 4s infinite linear; transition: .3s;transform: scale(1);}
+@keyframes menuWave {
+    0% {background: url('../images/menu_wave.png') 0 15px repeat-x,
+        url('../images/menu_wave.png') 0 20px repeat-x,
+        url('../images/menu_wave.png') 0 25px repeat-x;}
+    100% {background: url('../images/menu_wave.png') -68px 15px repeat-x,
+        url('../images/menu_wave.png') -68px 20px repeat-x,
+        url('../images/menu_wave.png') -68px 25px repeat-x;}
+}
+.view .menu:before {content: "x"; position: absolute; left: 10px;top: 0px; color: #fff; font-weight: bold; font-size: 24px; z-index: 2; display: none;}
+.view .menu:after {content: "x"; position: absolute; left: 0;top: 0; background: rgba(0,0,0,.4); width: 100%; height: 100%; z-index: 1; display: none;}
+/* .view .menu:hover {animation-duration: 2s;} */
